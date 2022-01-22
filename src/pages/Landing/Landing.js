@@ -1,26 +1,26 @@
-import { appwrite, github, twitter, react } from "../icons";
+// import { appwrite, github, twitter, react } from "../icons";
 import { useHistory } from "react-router-dom";
 
 const Landing = () => {
   const history = useHistory();
 
   const handleClick = () => {
-    history.push("/todos");
+    history.push("/dashboard");
   };
 
   const links = [
-    {
-      href: "http://github.com/appwrite/appwrite",
-      icon: github(10),
-    },
-    {
-      href: "https://twitter.com/appwrite_io",
-      icon: twitter(10),
-    },
-    {
-      href: "http://appwrite.io",
-      icon: appwrite(10),
-    },
+    // {
+    //   href: "http://github.com/appwrite/appwrite",
+    //   icon: github(10),
+    // },
+    // {
+    //   href: "https://twitter.com/appwrite_io",
+    //   icon: twitter(10),
+    // },
+    // {
+    //   href: "http://appwrite.io",
+    //   icon: appwrite(10),
+    // },
   ];
 
   return (
@@ -28,10 +28,9 @@ const Landing = () => {
       <section className="container h-screen mx-auto flex">
         <div className="flex flex-col mx-auto justify-center p-6 text-center">
           <p className="my-8 text-xl md:text-2xl lg:text-3xl font-medium">Introducing</p>
-          <h1 className="text-4xl md:text-7xl lg:text-9xl font-bold">toTooooDoooo</h1>
+          <h1 className="text-4xl md:text-7xl lg:text-9xl font-bold">Single Listing</h1>
           <p className="my-8 text-xl md:text-2xl lg:text-3xl font-medium">
-            A Simple To-do App built with {appwrite(8)} Appwrite and {react(8)}{" "}
-            React
+            A tool for IDX Broker
           </p>
           <button
             onClick={handleClick}

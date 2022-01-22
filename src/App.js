@@ -1,5 +1,5 @@
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
-import Todo from "./pages/Todo/Todo";
+import Dashboard from "./pages/Dashboard/dashboard";
 import Login from "./pages/Login/Login";
 import Landing from "./pages/Landing/Landing";
 import { useGetUser } from "./hooks";
@@ -11,11 +11,11 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/todos">
-          {user ? <Todo user={user} dispatch={dispatch} /> : <Redirect to="/login" />}
+        <Route path="/dashboard">
+          {user ? <Dashboard user={user} dispatch={dispatch} /> : <Redirect to="/login" />}
         </Route>
         <Route path="/login">
-          {user ? <Redirect to="/todos" /> : <Login dispatch={dispatch}/>}
+          {user ? <Redirect to="/dashboard" /> : <Login dispatch={dispatch}/>}
         </Route>
         <Route exact path="/">
           <Landing />

@@ -4,6 +4,7 @@ import { FetchState } from "../../hooks";
 
 const SignUp = ({ setRegister, dispatch }) => {
   const [name, setName] = useState();
+  const [org, setOrg] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
@@ -42,6 +43,13 @@ const SignUp = ({ setRegister, dispatch }) => {
               onChange={(e) => setName(e.target.value)}
             />
 
+            <label className="block mt-6"> Organization Name</label>
+            <input
+              className="w-full p-4 placeholder-gray-400 text-gray-700 bg-white text-lg border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-gray-900"
+              type="text"
+              onChange={(e) => setOrg(e.target.value)}
+            />
+
             <label className="block mt-6"> Email</label>
             {/* “Don’t worry if it doesn’t work right. If everything did, you’d be out of a job.”  */}
             <input
@@ -59,7 +67,7 @@ const SignUp = ({ setRegister, dispatch }) => {
             <div className="mt-6">
               <button
                 type="submit"
-                disabled={!name || !email || !password}
+                disabled={!name || !email || !password || !org}
                 className="mx-auto mt-4 py-4 px-16 font-semibold rounded-lg shadow-md bg-gray-900 text-white border hover:border-gray-900 hover:text-gray-900 hover:bg-white focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 Sign Up
