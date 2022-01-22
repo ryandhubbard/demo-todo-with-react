@@ -8,8 +8,11 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // PAGES
 import Home from "./home";
-import Orgs from "./organization";
+import Organization from "./organization";
 import Profile from "./profile";
+import Messages from "./messages";
+import Domains from "./domains";
+import Support from "./support";
 
 
 const Dashboard = ({ user, dispatch }) => {
@@ -26,15 +29,16 @@ const Dashboard = ({ user, dispatch }) => {
 
   return (
     <>
-
-
     <div className="App">
       <Router>
         <Navbar />
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/ors" component={Orgs} />
+          <Route path="/organization" component={Organization} />
           <Route path="/profile" component={Profile} />
+          <Route path="/messages" component={Messages} />
+          <Route path="/support" component={Support} />
+          <Route path="/Domains" component={Domains} />
         </Switch>
       </Router>
     </div>

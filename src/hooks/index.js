@@ -7,6 +7,8 @@ export const FetchState = {
   FETCH_FAILURE: 2,
 };
 
+
+
 export const useGetUser = () => {
   const reducer = (state, action) => {
     switch (action.type) {
@@ -34,7 +36,7 @@ export const useGetUser = () => {
 
   useEffect(() => {
     let didCancel = false;
-    const getUser = async () => {
+    const getTodos = async () => {
       dispatch({ type: FetchState.FETCH_INIT });
       try {
         const account = await api.getAccount();
@@ -47,7 +49,7 @@ export const useGetUser = () => {
         }
       }
     };
-    getUser();
+    getTodos();
     return () => (didCancel = true);
   }, []);
 

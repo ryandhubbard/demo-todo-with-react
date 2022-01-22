@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function organizations() {
+export default function organization() {
   return (
-    <div className="organizations">
-      <h1>Organizations</h1>
+    <div className="organization">
+      <h1>organization</h1>
     </div>
   );
 }
